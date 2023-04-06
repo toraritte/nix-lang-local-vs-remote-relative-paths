@@ -4,11 +4,6 @@ let
 in
   ''
     ${pwd} --- ${puffin}
-    Contents of "./puffin":
-    ${builtins.readFile puffin}
-
-    Listing the current working directory:
-    ${builtins.concatStringsSep ", " (builtins.attrNames (builtins.readDir pwd))}
   ''
 
   # "${pwd} --- ${puffin}"
